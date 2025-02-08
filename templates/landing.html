@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Workout Guide</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Fuggles&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container1">
+      <ul class="nav-links">
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <div class="heading">
+        <h1>FitWave</h1>
+        <h2>Dynamic Workout Guide</h2>
+        <p>Your personalized fitness journey starts here.</p>
+        <a href="{{ url_for('signup') }}" class="btn">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="aboutUs" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="static/images/about.jpeg" alt="About Us Image">
+        </div>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>In today's fast-paced world, maintaining fitness goals can be challenging. Our project aims to address this challenge by providing a comprehensive online platform that serves as a personalized fitness guide and workout tracker. Whether you're looking to lose weight, gain muscle, or maintain your current physique, our platform offers tailored workout recommendations, progress tracking, and dynamic goal adjustments to empower you on your fitness journey.</p>
+          <p>With our user-friendly interface and expert-curated content, achieving your fitness goals has never been easier. Join us today and take control of your health and well-being.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+  <section id="features" class="features">
+    <div class="container">
+      <div class="features-content">
+        <div class="feature">
+          <h2>Features</h2>
+          <div class="feature-info">
+            <h3 style="margin-bottom: 10px;">Personalized Workout Recommendations</h3> <!-- Added margin-bottom -->
+            <p>Input your parameters and fitness goals to receive tailored workout videos.</p>
+          </div>
+          <div class="feature-info">
+            <h3 style="margin-bottom: 10px;">Progress Tracking</h3> <!-- Added margin-bottom -->
+            <p>Track your progress over time through graphical representations and data analysis.</p>
+          </div>
+          <div class="feature-info">
+            <h3 style="margin-bottom: 10px;">Dynamic Goal Adjustments</h3> <!-- Added margin-bottom -->
+            <p>Receive continuously adjusted workout recommendations based on your evolving objectives.</p>
+          </div>
+        </div>
+        <div class="features-image">
+          <img class='img1' src="static/images/features.jpeg" alt="Features Image">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Dynamic Workout Guide. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

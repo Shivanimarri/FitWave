@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Fuggles&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">FitWave</div>
+        <ul>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <img src="{{ url_for('static', filename='images/human_icon.jpg') }}" alt="Profile"
+                            class="profile-icon">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('profile') }}">Profile</a>
+                        <a href="{{ url_for('logout') }}">Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="welcome-section">
+            <!-- <img src="fitness.jpg" alt="Exercise Image" class="exercise-image"> -->
+            <div class="top clearfix">
+                <div>
+                    <h1>Hello, {{ user_name }}</h1>
+                    <p id="a">FitWave - Transform Your Body, Ignite Your Potential: Your Journey Starts Here.</p>
+                    <p id="b">Your Recommendation:</p>
+                    <a href="{{url_for('week')}}" class="no-decoration">
+                        <div class="box">
+                            <p>Weight: {{ weight }} kgs</p>
+                            <p>Duration: {{ duration }} weeks</p>
+                            <p>Goal: {{ goal }}</p>
+                        </div>
+                    </a>
+                </div>
+                <img src="/static/images/y.png" alt="yoja">
+            </div>
+
+        </div>
+        <div class="exercise-library">
+            <h2>Exercise Library</h2>
+            <div class="exercise-category">
+                <h3>Women</h3>
+                <h4>Toned Arm</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('toned_begineer') }}" class="no-decoration">
+                            <div class="exercise-t exercise">Toned Arm - Beginner </div>
+                        </a>
+                        <a href="{{ url_for('toned_intermediate') }}" class="no-decoration">
+                            <div class="exercise-t exercise">Toned Arm - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('toned_advanced') }}" class="no-decoration">
+                            <div class="exercise-t exercise">Toned Arm - Advanced</div>
+                        </a>
+                    </div>
+                </div>
+
+                <h4>Hands and Wrists</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('hand_begineer') }}" class="no-decoration">
+                            <div class="exercise exercise-h">Hands and Wrists - Beginner</div>
+                        </a>
+                        <a href="{{ url_for('hand_intermediate') }}" class="no-decoration">
+                            <div class="exercise exercise-h">Hands and Wrists - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('hand_advanced') }}" class="no-decoration">
+                            <div class="exercise exercise-h">Hands and Wrists - Advanced</div>
+                        </a>
+                    </div>
+                </div>
+                <h4>Facial Exercises</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('facial_begineer') }}" class="no-decoration">
+                            <div class="exercise exercise-f">Facial Exercises - Begineer</div>
+                        </a>
+                        <a href="{{ url_for('facial_intermediate') }}" class="no-decoration">
+                            <div class="exercise exercise-f">Facial Exercises - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('facial_advanced') }}" class="no-decoration">
+                            <div class="exercise exercise-f">Facial Exercises - Advanced</div>
+                        </a>
+                    </div>
+                </div>
+                <h4>Thigh Workout</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('thigh_begineer') }}" class="no-decoration">
+                            <div class="exercise exercise-tw">Thigh Workout - Beginner</div>
+                        </a>
+                        <a href="{{ url_for('thigh_intermediate') }}" class="no-decoration">
+                            <div class="exercise exercise-tw">Thigh Workout - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('thigh_advanced') }}" class="no-decoration">
+                            <div class="exercise exercise-tw">Thigh Workout - Advanced</div>
+                        </a>
+                    </div>
+                </div>
+                <h4>Flat Stomach</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('flat_begineer') }}" class="no-decoration">
+                            <div class="exercise exercise-fs">Flat Stomach - Beginner</div>
+                        </a>
+                        <a href="{{ url_for('flat_intermediate') }}" class="no-decoration">
+                            <div class="exercise exercise-fs">Flat Stomach - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('flat_advanced') }}" class="no-decoration">
+                            <div class="exercise exercise-fs">Flat Stomach - Advanced</div>
+                        </a>
+                    </div>
+                </div>
+                <h4>shoulders</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('shoulders_begineer') }}" class="no-decoration">
+                            <div class="exercise exercise-s">shoulders - Beginner</div>
+                        </a>
+                        <a href="{{ url_for('shoulders_intermediate') }}" class="no-decoration">
+                            <div class="exercise exercise-s">shoulders - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('shoulders_advanced') }}" class="no-decoration">
+                            <div class="exercise exercise-s">shoulders - Advanced</div>
+                        </a>
+                    </div>
+                </div>
+                <h4>Back Exercises</h4>
+                <div class="exercise-list-container">
+                    <div class="exercise-list">
+                        <a href="{{ url_for('back_begineer') }}" class="no-decoration">
+                            <div class="exercise exercise-b">Back Exercises - Beginner</div>
+                        </a>
+                        <a href="{{ url_for('back_intermediate') }}" class="no-decoration">
+                            <div class="exercise exercise-b">Back Exercises - Intermediate</div>
+                        </a>
+                        <a href="{{ url_for('back_advanced') }}" class="no-decoration">
+                            <<div class="exercise exercise-b">Back Exercises - Advanced
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exercise-category">
+        <h3>Men</h3>
+        <h4>Biceps</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('biceps_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-bi">Biceps - Beginner</div>
+                </a>
+                <a href="{{ url_for('biceps_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-bi">Biceps - Intermediate</div>
+                </a>
+                <a href="{{ url_for('biceps_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-bi">Biceps - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Triceps</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('triceps_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-tri">Triceps - Beginner</div>
+                </a>
+                <a href="{{ url_for('triceps_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-tri">Triceps - Intermediate</div>
+                </a>
+                <a href="{{ url_for('triceps_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-tri">Triceps - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Chest</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('chest_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-c">Chest - Beginner</div>
+                </a>
+                <a href="{{ url_for('chest_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-c">Chest - Intermediate</div>
+                </a>
+                <a href="{{ url_for('chest_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-c">Chest - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Legs</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('legs_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-l">Legs - Beginner</div>
+                </a>
+                <a href="{{ url_for('legs_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-l">Legs - Intermediate</div>
+                </a>
+                <a href="{{ url_for('legs_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-l">Legs - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Abs</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('abs_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-a">Abs - Beginner</div>
+                </a>
+                <a href="{{ url_for('abs_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-a">Abs - Intermediate</div>
+                </a>
+                <a href="{{ url_for('abs_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-a">Abs - Advanced</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="exercise-category">
+        <h3>General Exercises</h3>
+        <h4>Cardiovascular</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('cardiovascular_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-cad">Cardiovascular - Beginner</div>
+                </a>
+                <a href="{{ url_for('cardiovascular_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-cad">Cardiovascular - Intermediate</div>
+                </a>
+                <a href="{{ url_for('cardiovascular_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-cad">Cardiovascular - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Strength Training</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('strength_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-st">Strength Training - Beginner</div>
+                </a>
+                <a href="{{ url_for('strength_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-st">Strength Training - Intermediate</div>
+                </a>
+                <a href="{{ url_for('strength_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-st">Strength Training - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Flexibility and Mobility</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('flexibility_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-fl">Flexibility and Mobility - Beginner</div>
+                </a>
+                <a href="{{ url_for('flexibility_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-fl">Flexibility and Mobility - Intermediate</div>
+                </a>
+                <a href="{{ url_for('flexibility_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-fl">Flexibility and Mobility - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Balance and Stability</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('balance_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-bal">Balance and Stability - Beginner</div>
+                </a>
+                <a href="{{ url_for('balance_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-bal">Balance and Stability - Intermediate</div>
+                </a>
+                <a href="{{ url_for('balance_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-bal">Balance and Stability - Advanced</div>
+                </a>
+            </div>
+        </div>
+        <h4>Core Strength</h4>
+        <div class="exercise-list-container">
+            <div class="exercise-list">
+                <a href="{{ url_for('core_begineer') }}" class="no-decoration">
+                    <div class="exercise exercise-co">Core Strength - Beginner</div>
+                </a>
+                <a href="{{ url_for('core_intermediate') }}" class="no-decoration">
+                    <div class="exercise exercise-co">Core Strength - Intermediate</div>
+                </a>
+                <a href="{{ url_for('core_advanced') }}" class="no-decoration">
+                    <div class="exercise exercise-co">Core Strength - Advanced</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

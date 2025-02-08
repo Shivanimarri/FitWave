@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../images/ROPE.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden; /* Prevent scrolling for blur effect */
+  }
+  
+  .signup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    padding: 50px; /* Decrease padding */
+    border-radius: 10px;
+    backdrop-filter: blur(0.15px); /* Apply blur effect to the background */
+    width: 450px; /* Increase width */
+    max-width: 90%; /* Set maximum width */
+  }
+
+  .signup-container h1 {
+    font-family: "Anta"; /* Use Anton-Regular font */
+    font-size: 80px; /* Decrease font size */
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px; /* Decrease margin below the name */
+    margin-top: 0; /* Reduce top margin */
+  }
+
+  .signup-container label {
+    display: block;
+    color: #333;
+    margin-bottom: 0px; /* Decrease margin below labels */
+    font-size: 18px; /* Increase font size */
+  }
+
+  .signup-container input[type="text"],
+  .signup-container input[type="password"],
+  .signup-container input[type="email"] {
+    width: calc(100% - 22px); /* Adjust width to accommodate border and padding */
+    padding: 13px; /* Increase padding */
+    margin-bottom: 20px; /* Decrease margin below input fields */
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #666; /* Darken bottom border */
+    background: transparent; /* Transparent background */
+    outline: none; /* Remove default input focus outline */
+    font-size: 18px; /* Increase font size */
+    font-family: serif; /* Change font to serif */
+  }
+
+  .signup-container input[type="submit"] {
+    width: calc(100% - 22px); /* Adjust width to accommodate border and padding */
+    padding: 15px; /* Increase padding */
+    margin-top: 10px; /* Adjust top margin */
+    margin-bottom: 10px; /* Adjust bottom margin */
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #555; /* Dark grey button color */
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px; /* Increase font size */
+  }
+
+  .signup-container input[type="submit"]:hover {
+    background-color: #444; /* Darker grey on hover */
+  }
+
+  .signup-container form hr {
+    border: none;
+    border-bottom: 2px solid #666; /* Darken horizontal line below inputs */
+    margin: 20px 0; /* Increase margin */
+  }
+
+  .signup-container h2 {
+    display: none; /* Hide the signup text above */
+  }
+
+  /* Style for the login link */
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-link a {
+    color: #333; /* Change link color to #333 */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold; /* Make the text bold */
+  }
+
+  .login-link a:hover {
+    text-decoration: underline;
+  }

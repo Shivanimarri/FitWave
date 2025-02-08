@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/exercise.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>{{name}}</h1>
+            <p>Get ready to challenge yourself! You will get a good shape in just a few weeks!</p>
+            <p>Total Number of Exercises:3</p>
+        </header>
+    
+        <ul class="exercise-list">
+            {% for exercise in exercises %}
+                {% if exercise is mapping %}
+                    {% if exercise.get('name1') %}
+                    <li class="exercise">
+                        <h2><a href="{{ url_for('video1') }}">{{ exercise.get('name1') }}</a></h2>
+                        <p>Takes 5 minutes</p>
+                    </li>
+                    {% endif %}
+                    {% if exercise.get('name2') %}
+                    <li class="exercise">
+                        <h2><a href="{{ url_for('video2') }}">{{ exercise.get('name2') }}</a></h2>
+                        <p>Takes 5 minutes</p>
+                    </li>
+                    {% endif %}
+                    {% if exercise.get('name3') %}
+                    <li class="exercise">
+                        <h2><a href="{{ url_for('video3') }}">{{ exercise.get('name3') }}</a></h2>
+                        <p>Takes 5 minutes</p>
+                    </li>
+                    {% endif %}
+                {% else %}
+                    <li class="exercise">
+                        <h2><a href="{{ url_for('video1') }}">{{ exercise }}</a></h2>
+                        <p>Takes 5 minutes</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial;
+    background-color: #e7e5e5;
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 13px 25px; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .home-icon {
+    margin-right: 20px; /* Add margin to separate from other elements */
+}
+
+.navbar .home-icon img {
+    height: 40px;
+    width: 40px; /* Set width and height to create a circular icon */
+    border-radius: 50%; /* Make the image circular */
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px; 
+    /* padding-top: 20px; /* Add padding */
+} 
+p{
+    padding : 10px 0px;
+}
+h1{
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+.horizontal-line {
+    border: none; /* Remove default border */
+    height: 3px; /* Set the height to change the thickness*/ 
+    background-color: #333; /* Set the color of the line */
+    margin: 20px 0; /* Add margin top and bottom */
+} 
+
+
+/* Profile details styles */
+.profile-details {
+    background-color: #ffffff; /* Set background color */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    padding: 20px; /* Add padding */
+}
+
+/* Profile details container */
+.profile-details-container {
+    width: 100%;
+     /* Occupy complete width */
+}
+
+/* Horizontal line */
+/* .horizontal-line1 {
+    border-top: 3px solid #151515; 
+    padding: 5px; /* Add border for the line 
+    
+} */
+
+/* Weight graph styles */
+.weight-graph-container {
+    background-color: #ffffff; /* Set background color */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    padding: 20px; /* Add padding */
+    
+}
+
+/* Weight graph container */
+.weight-graph-container-container {
+    width: 100%; /* Occupy complete width */
+    
+}

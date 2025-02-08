@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ name }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/exercise.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>{{ name }}</h1>
+            <p>Get ready to challenge yourself! You will get a good shape in just a few weeks!</p>
+            <p>Total Number of Exercises: 7 </p>
+        </header>
+    
+        <ul class="exercise-list">
+            {% for exercise in exercises %}
+            <li class="exercise">
+                <h2><a href="{{ url_for('video', url=exercise.url ,url0=url0)}}">{{ exercise.name }}</a></h2>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        .video-section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+
+        }
+
+        .video-container {
+            width: 100%;
+            height: calc(100vh - 160px);
+            /* Subtracting the height of video-section and paragraph */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-info {
+            color: rgb(255, 255, 255);
+            font-family: 'anta';
+            font-size: 40px;
+            z-index: 1;
+        }
+
+        .video-controls {
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .video-controls button {
+            background-color: hsl(0, 0%, 100%);
+            /* Green background color */
+            border: 2px solid #d5d6d5;
+            /* Green border */
+            padding: 5px 20px;
+            /* Increase padding for better button size */
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 5px;
+            color: #333;
+            /* White text color */
+            transition: background-color 0.3s, border-color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .video-controls button:hover {
+            background-color: #a5a5a5;
+            /* Darker green on hover */
+            border-color: #858585;
+            /* Darker green border on hover */
+        }
+
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            padding:5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-section">
+        <h1 class="video-info">FitWave</h1>
+        <div class="video-controls">
+        {% if url0 %}
+            <a href="{{ url_for(url0) }}"><button id="exercise">Exercises</button></a>
+        {% endif %}
+        
+        </div>
+    </div>
+    <div class="video-container">
+        <iframe id="videoFrame" src="{{ video_url }}?controls=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Don't skip the video, watch it till the end.</p>
+
+</body>
+
+</html>

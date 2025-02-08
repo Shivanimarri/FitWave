@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <a class="home-icon" href="{{ url_for('home') }}"><img
+                src="{{ url_for('static', filename='images/home.png') }}" alt="Home"></a>
+    </nav>
+
+    <!-- Profile content -->
+    <div class="main-content">
+        <div class="profile-details">
+            <h1>User Profile</h1>
+            <hr class="horizontal-line">
+            <!-- Profile details -->
+            <div class="container">
+                
+                <p><strong>Name:</strong> {{ profile.name }}</p>
+                <hr>
+                <p><strong>Email:</strong> {{ profile.email }}</p>
+                <hr>
+                <p><strong>Age:</strong> {{ profile.age }} yrs</p>
+                <hr>
+                <p><strong>Weight:</strong> {{ profile.weight }} kg</p>
+                <hr>
+                <p><strong>Height:</strong> {{ profile.height }} cm</p>
+                <hr>
+                <p><strong>Goal Weight:</strong> {{ profile.goal_weight }} kg</p>
+                <hr>
+                <p><strong>Duration:</strong> {{ profile.duration }} months</p>
+            </div>
+        </div>
+
+        <!-- Graphical Representation -->
+        <div class="weight-graph-container">
+            <h2>Graphical Representation</h2>
+            <!-- Include Chart.js library directly in HTML -->
+            <div class="weight-graph">
+                <canvas id="weightChart" width="400" height="170"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript code to create the chart -->
+    <script>
+        // Retrieve weight data and submission dates from the server
+        var weightData = {{ weight_data | tojson | safe }};
+        var submissionDates = {{ submission_dates | tojson | safe }};
+
+        // Create a new Chart.js instance
+        var ctx = document.getElementById('weightChart').getContext('2d');
+        var weightChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: submissionDates,
+                datasets: [{
+                    label: 'Weight (kg)',
+                    data: weightData,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Submission Date'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Weight (kg)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

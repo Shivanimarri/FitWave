@@ -1,0 +1,342 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #efefef;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+nav .logo {
+    font-family: "Anta";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.box {
+    float: left;
+    width: 400px;
+    height: 180px;
+    margin: 0px 10px;
+    padding: 10px; /* Increased padding for better content spacing */
+    background-color: #ffffff; /* Changed background color to white */
+    border-radius: 5px;
+    font-family: Arial; /* Changed font-family to Arial */
+    font-size: 18px; /* Reduced font size for better readability */
+    color: #444;
+    position: relative; 
+    box-sizing: border-box; /* Ensure padding and border are included in the box dimensions */
+    overflow: hidden; /* Hide overflow content */
+    word-wrap: break-word; /* Wrap long words */
+
+}
+.box p{
+    padding-left:15px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-weight: bold;
+}
+
+li a {
+
+    text-decoration: none;
+    color: #908f8f;
+    font-size: 1.25rem;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+}
+.top img{
+    /* height:250px;
+    width: 250px; */
+    float: left;
+    margin-left: 125px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.welcome-section {
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.exercise-t {
+   background-image:  url('../images/t.gif'); 
+   background-position: center;
+}
+
+.exercise-h {
+    background-image:  url('../images/h.gif'); 
+    background-position: center;
+ }
+
+ .exercise-f {
+    background-image:  url('../images/f.gif'); 
+    background-position: center;
+ }
+
+ .exercise-tw {
+    background-image:  url('../images/tw.gif'); 
+    background-position: center;
+ }
+
+ .exercise-fs {
+    background-image:  url('../images/fs.gif'); 
+    background-position: center;
+ }
+
+ .exercise-s {
+    background-image:  url('../images/s.gif'); 
+    background-position: center;
+ }
+
+ .exercise-b {
+    background-image:  url('../images/b.gif'); 
+    background-position: center;
+ }
+
+ .exercise-bi {
+    background-image:  url('../images/bi.gif'); 
+    background-position: center;
+ }
+
+ .exercise-l {
+    background-image:  url('../images/l.gif'); 
+    background-position: center;
+ }
+
+ .exercise-a {
+    background-image:  url('../images/a.gif'); 
+    background-position: center;
+ }
+
+ .exercise-tri {
+    background-image:  url('../images/tri.gif'); 
+    background-position: center;
+ }
+
+ .exercise-c {
+    background-image:  url('../images/c.gif'); 
+    background-position: center;
+ }
+
+ .exercise-cad{
+    background-image:  url('../images/cad.gif'); 
+    background-position: center;
+ }
+
+ .exercise-st{
+    background-image:  url('../images/st.gif'); 
+    background-position: center;
+ }
+
+ .exercise-bal{
+    background-image:  url('../images/bal.gif'); 
+    background-position: center;
+ }
+
+ .exercise-fl{
+    background-image:  url('../images/fl.gif'); 
+    background-position: center;
+ }
+
+ .exercise-co{
+    background-image:  url('../images/co.gif'); 
+    background-position: center;
+ }
+
+.exercise-library {
+    margin-top: 20px;
+}
+
+.exercise-library h2 {
+    background-color: #333;
+    margin: 0 -5px;
+    /* Adjust margin to include 5px on each side */
+    padding: 10px 20px;
+    /* Add padding for better visual appeal */
+    font-size: 30px;
+    font-weight: bold;
+    color: #fffafa;
+}
+
+.exercise-category {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.exercise-category h3 {
+    padding: 0px 5px;
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #444;
+}
+
+.exercise-category h4 {
+    padding: 0px 5px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #777;
+}
+
+.exercise-list-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    cursor: grab;
+    /* Change cursor to grab */
+    touch-action: pan-y;
+    /* Enable touch interaction */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+}
+
+
+.exercise-list {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding-bottom: 15px;
+    /* Add some bottom padding to prevent horizontal scroll from cutting off */
+}
+
+
+.exercise::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar on WebKit browsers */
+}
+
+
+.exercise {
+    width: 700px;
+    height: 300px;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #444;
+    position: relative; 
+}
+.exercise p{
+    margin: 0px;
+}
+.exercise img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    max-height: 100%; /* Ensure the image does not exceed the height of its container */
+    display: block; /* Remove any extra spacing */
+    margin: auto; /* Center the image horizontally */
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.welcome-section {
+    text-align: left;
+    /* Align text to the left */
+    padding: 15px 10px;
+    /* Adjust padding for space from nav bar */
+}
+
+.welcome-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin-left:5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* Remove margin */
+}
+
+p#a {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top:0px;
+}
+
+p#b {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown button */
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}

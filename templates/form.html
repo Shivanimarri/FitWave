@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Workout Guide</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to FitWave</h1>
+    <form id="inputForm" method="POST" action="{{ url_for('form') }}">
+      <label for="Name">Name:</label>
+      <input type="text" id="Name" name="Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" name="height" required>
+
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" name="weight" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+
+      <label for="goal">Select Your Fitness Goal:</label>
+      <select id="goal" name="goal" required>
+        <option value="loseWeight">Lose Weight (Get lean fast and healthy)</option>
+        <option value="getStronger">Get Stronger (Tone up and get in better shape)</option>
+        <option value="keepFit">Keep Fit (Stay fit and improve health)</option>
+      </select>
+
+      <label for="goalWeight">Goal Weight (kg):</label>
+      <input type="number" id="goalWeight" name="goalWeight" required min="0" max="30">
+
+      <label for="duration">Duration(months):</label>
+      <input type="number" id="duration" name="duration" required min="1" max="6">  
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Fuggles&family=Pacifico&display=swap" rel="stylesheet">
+
+</html>
